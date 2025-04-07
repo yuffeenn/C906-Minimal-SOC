@@ -37,7 +37,7 @@
 
 ### 软件
 
-- Vivado 2018.3
+- Vivado2018.3
 - 剑池CDK
 - VCS2018
 - Verdi2018

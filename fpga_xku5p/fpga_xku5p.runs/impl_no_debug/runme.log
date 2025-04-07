@@ -1,0 +1,1002 @@
+
+*** Running vivado
+    with args -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: link_design -top top -part xcku5p-ffvb676-2-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 5920 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xcku5p-ffvb676-2-i
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/zfh/Desktop/soc_workspace/soc_c906_v1.1/fpga_xku5p/constrs/top.xdc]
+Finished Parsing XDC File [/home/zfh/Desktop/soc_workspace/soc_c906_v1.1/fpga_xku5p/constrs/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2686.980 ; gain = 0.000 ; free physical = 227845 ; free virtual = 251605
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 250 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 6 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E, RAMS64E): 8 instances
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 1 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 234 instances
+
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:59 . Memory (MB): peak = 2686.980 ; gain = 1266.137 ; free physical = 227845 ; free virtual = 251605
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku5p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku5p'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2751.012 ; gain = 64.031 ; free physical = 227835 ; free virtual = 251594
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1515aa227
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2913.012 ; gain = 162.000 ; free physical = 227547 ; free virtual = 251306
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 11 inverter(s) to 14259 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1b0cdb0ee
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 2985.012 ; gain = 0.004 ; free physical = 227576 ; free virtual = 251335
+INFO: [Opt 31-389] Phase Retarget created 10 cells and removed 104 cells
+INFO: [Opt 31-1021] In phase Retarget, 16 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 19a456279
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2985.012 ; gain = 0.004 ; free physical = 227576 ; free virtual = 251336
+INFO: [Opt 31-389] Phase Constant propagation created 5 cells and removed 7 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 5 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1669d7f6f
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2985.012 ; gain = 0.004 ; free physical = 227573 ; free virtual = 251332
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Sweep, 159 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1669d7f6f
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2985.012 ; gain = 0.004 ; free physical = 227574 ; free virtual = 251334
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 15058198e
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 2985.012 ; gain = 0.004 ; free physical = 227575 ; free virtual = 251334
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 15058198e
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2985.012 ; gain = 0.004 ; free physical = 227574 ; free virtual = 251334
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 13 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              10  |             104  |                                             16  |
+|  Constant propagation         |               5  |               7  |                                              5  |
+|  Sweep                        |               0  |               0  |                                            159  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             13  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2985.012 ; gain = 0.000 ; free physical = 227574 ; free virtual = 251334
+Ending Logic Optimization Task | Checksum: 15058198e
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2985.012 ; gain = 0.004 ; free physical = 227575 ; free virtual = 251334
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.745 | TNS=-477.810 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 4 BRAM(s) out of a total of 362 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-201] Structural ODC has moved 68 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 68 Total Ports: 724
+Ending PowerOpt Patch Enables Task | Checksum: 1aa88a501
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 5092.473 ; gain = 0.000 ; free physical = 226558 ; free virtual = 250323
+Ending Power Optimization Task | Checksum: 1aa88a501
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:37 . Memory (MB): peak = 5092.473 ; gain = 2107.461 ; free physical = 226637 ; free virtual = 250402
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1aa88a501
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5092.473 ; gain = 0.000 ; free physical = 226637 ; free virtual = 250402
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5092.473 ; gain = 0.000 ; free physical = 226637 ; free virtual = 250402
+Ending Netlist Obfuscation Task | Checksum: 19996984d
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5092.473 ; gain = 0.000 ; free physical = 226637 ; free virtual = 250402
+INFO: [Common 17-83] Releasing license: Implementation
+34 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:02:37 ; elapsed = 00:02:10 . Memory (MB): peak = 5092.473 ; gain = 2405.492 ; free physical = 226637 ; free virtual = 250402
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5092.473 ; gain = 0.000 ; free physical = 226637 ; free virtual = 250402
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.05 . Memory (MB): peak = 5092.473 ; gain = 0.000 ; free physical = 226628 ; free virtual = 250398
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5092.473 ; gain = 0.000 ; free physical = 226613 ; free virtual = 250392
+INFO: [Common 17-1381] The checkpoint '/home/zfh/Desktop/soc_workspace/soc_c906_v1.1/fpga_xku5p/fpga_xku5p.runs/impl_no_debug/top_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 5092.473 ; gain = 0.000 ; free physical = 226624 ; free virtual = 250408
+INFO: [runtcl-4] Executing : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+Command: report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/data/tools/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/zfh/Desktop/soc_workspace/soc_c906_v1.1/fpga_xku5p/fpga_xku5p.runs/impl_no_debug/top_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 5116.484 ; gain = 24.012 ; free physical = 226581 ; free virtual = 250365
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku5p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku5p'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226576 ; free virtual = 250360
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 117d66b65
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226576 ; free virtual = 250360
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226576 ; free virtual = 250360
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 177f7ba7b
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226465 ; free virtual = 250249
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 2084ec672
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:21 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226278 ; free virtual = 250062
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2084ec672
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:21 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226273 ; free virtual = 250057
+Phase 1 Placer Initialization | Checksum: 2084ec672
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:22 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226255 ; free virtual = 250039
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 227607d72
+
+Time (s): cpu = 00:03:33 ; elapsed = 00:01:32 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226148 ; free virtual = 249932
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/ADDRARDADDR[1] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/mem_reg_bram_0_i_9__3 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/mem_reg_bram_0_i_10__3 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/ADDRARDADDR[3] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/mem_reg_bram_0_i_7__15 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/ADDRARDADDR[6] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/mem_reg_bram_0_i_4__15 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/ADDRARDADDR[2] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/mem_reg_bram_0_i_8__15 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/ADDRARDADDR[9] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/mem_reg_bram_0_i_1__15 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/ADDRARDADDR[4] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/mem_reg_bram_0_i_6__15 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/ADDRARDADDR[5] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/mem_reg_bram_0_i_5__15 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/ADDRARDADDR[8] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/mem_reg_bram_0_i_2__15 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/ADDRARDADDR[7] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_pred/x_aq_ifu_bht/x_aq_ifu_bht_array/x_aq_spsram_1024x16/x_aq_f_spsram_1024x16/RAM_DIN_VEC[15].ram_instance/mem_reg_bram_0_i_3__15 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_10__14 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_10__15 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_10__8 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_10__12 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_10__13 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[7] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_1__21 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_10__9 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[7] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_1__20 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_10__11 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[5] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_3__80 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[7] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_1__24 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[5] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_3__81 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_10__10 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[7] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_1__25 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[5] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_3__76 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[5] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_3__74 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[7] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_1__22 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[7] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_1__23 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[1] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_7__24 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[3] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_5__27 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[6] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_2__22 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/addr_holding_reg[2]_5[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/mem_reg_bram_0_i_8__23 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/addr_holding_reg[2]_6[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/mem_reg_bram_0_i_8__24 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[2] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_6__32 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[3] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_5__33 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[6] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_2__27 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[2] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_6__28 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[2] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_6__31 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[5] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_3__77 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[6] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_2__26 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[3] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_5__31 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[6] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_2__20 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[3] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_5__34 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/mem_reg_bram_0_i_10__4 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[2] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_6__27 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[4] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_4__22 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[4] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_4__26 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[4] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_4__27 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[3] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_5__28 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[6] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_2__23 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[3] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_5__32 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[7] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_1__27 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/mem_reg_bram_0_i_8__22 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[1] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_7__27 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/ADDRARDADDR[5] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/mem_reg_bram_0_i_3__70 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[6] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_2__21 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/mem_reg_bram_0_i_10__7 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[4] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_4__21 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[2] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_6__33 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/addr_holding_reg[2]_8[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/mem_reg_bram_0_i_8__26 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/stb_entry_bytes_vld_reg[1]_2[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/mem_reg_bram_0_i_2__29 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[5] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_3__79 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_0/stb_entry_bytes_vld_reg[2]_2[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_0/mem_reg_bram_0_i_2__33 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/addr_holding_reg[2]_7[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/mem_reg_bram_0_i_8__25 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[5] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_3__75 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/stb_entry_bytes_vld_reg[7]_2[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/mem_reg_bram_0_i_2__53 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/stb_entry_bytes_vld_reg[7]_4[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/mem_reg_bram_0_i_2__55 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/addr_holding_reg[2]_4[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/mem_reg_bram_0_i_8__21 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[4] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_4__20 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/stb_entry_bytes_vld_reg[6]_3[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/mem_reg_bram_0_i_2__49 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[7] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_1__26 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[5] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_3__78 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[3] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_5__30 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/addr_holding_reg[2]_9[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/mem_reg_bram_0_i_8__27 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/stb_entry_bytes_vld_reg[5]_2[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/mem_reg_bram_0_i_2__45 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[1] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_7__26 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[2] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_6__29 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/ADDRARDADDR[7] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/mem_reg_bram_0_i_1__16 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_0/stb_entry_bytes_vld_reg[2]_4[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_0/mem_reg_bram_0_i_2__35 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[1] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_7__22 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[2] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_6__30 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[1] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_7__23 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/ADDRARDADDR[3] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[27].ram_instance/mem_reg_bram_0_i_5__29 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_0/stb_entry_bytes_vld_reg[4]_4[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_0/mem_reg_bram_0_i_2__43 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/stb_entry_bytes_vld_reg[3]_4[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/mem_reg_bram_0_i_2__39 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/stb_entry_bytes_vld_reg[3]_2[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/mem_reg_bram_0_i_2__37 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_lfb/x_aq_lsu_lfb_entry_3/addr_holding_reg[1]_3[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_lfb/x_aq_lsu_lfb_entry_3/mem_reg_bram_0_i_9__8 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_lfb/x_aq_lsu_lfb_entry_3/ADDRARDADDR[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_lfb/x_aq_lsu_lfb_entry_3/mem_reg_bram_0_i_9__14 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/stb_entry_bytes_vld_reg[1]_4[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/mem_reg_bram_0_i_2__31 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[1] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank1/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_7__21 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_0/stb_entry_bytes_vld_reg[4]_2[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_0/mem_reg_bram_0_i_2__41 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[1] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank3/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_7__25 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_lfb/x_aq_lsu_lfb_entry_3/addr_holding_reg[1]_7[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_lfb/x_aq_lsu_lfb_entry_3/mem_reg_bram_0_i_9__12 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/addr_holding_reg[2]_3[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_1/mem_reg_bram_0_i_8__20 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/stb_entry_bytes_vld_reg[6]_5[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/mem_reg_bram_0_i_2__51 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/ADDRARDADDR[6] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/mem_reg_bram_0_i_2__16 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_0/stb_entry_bytes_vld_reg[4]_1[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_0/mem_reg_bram_0_i_2__40 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/stb_entry_bytes_vld_reg[0]_2[0] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_stb/x_aq_lsu_stb_entry_2/mem_reg_bram_0_i_12__5 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/ADDRARDADDR[4] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank2/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[61].ram_instance/mem_reg_bram_0_i_4__23 could not be replicated
+INFO: [Physopt 32-117] Net x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/ADDRARDADDR[2] could not be optimized because driver x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_dcache_top/x_aq_dcache_data_array_bank0/x_aq_spsram_1024x64/x_aq_f_spsram_1024x64/RAM_DIN_VEC[63].ram_instance/mem_reg_bram_0_i_6__23 could not be replicated
+INFO: [Common 17-14] Message 'Physopt 32-117' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-68] No nets found for critical-cell optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226131 ; free virtual = 249915
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
+|  Fanout                        |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Cell                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           7  |  00:00:01  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 1a5469bd3
+
+Time (s): cpu = 00:07:45 ; elapsed = 00:04:02 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226133 ; free virtual = 249918
+Phase 2 Global Placement | Checksum: 196ba7b41
+
+Time (s): cpu = 00:07:57 ; elapsed = 00:04:07 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226187 ; free virtual = 249973
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 196ba7b41
+
+Time (s): cpu = 00:07:58 ; elapsed = 00:04:07 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226187 ; free virtual = 249972
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 109054ae2
+
+Time (s): cpu = 00:08:09 ; elapsed = 00:04:12 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226161 ; free virtual = 249947
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1eeb88a95
+
+Time (s): cpu = 00:08:11 ; elapsed = 00:04:13 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226161 ; free virtual = 249947
+
+Phase 3.4 IO Cut Optimizer
+Phase 3.4 IO Cut Optimizer | Checksum: 18896ccd8
+
+Time (s): cpu = 00:08:12 ; elapsed = 00:04:14 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226166 ; free virtual = 249952
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1f18b6cb2
+
+Time (s): cpu = 00:08:36 ; elapsed = 00:04:32 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226165 ; free virtual = 249951
+
+Phase 3.6 Small Shape Clustering
+Phase 3.6 Small Shape Clustering | Checksum: 18337e989
+
+Time (s): cpu = 00:08:52 ; elapsed = 00:04:45 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226072 ; free virtual = 249859
+
+Phase 3.7 Flow Legalize Slice Clusters
+Phase 3.7 Flow Legalize Slice Clusters | Checksum: 152a2252e
+
+Time (s): cpu = 00:08:53 ; elapsed = 00:04:45 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226081 ; free virtual = 249869
+
+Phase 3.8 Slice Area Swap
+Phase 3.8 Slice Area Swap | Checksum: 18a871079
+
+Time (s): cpu = 00:09:15 ; elapsed = 00:05:02 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226032 ; free virtual = 249819
+
+Phase 3.9 Commit Slice Clusters
+Phase 3.9 Commit Slice Clusters | Checksum: 182edc9aa
+
+Time (s): cpu = 00:09:35 ; elapsed = 00:05:08 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226008 ; free virtual = 249795
+
+Phase 3.10 Re-assign LUT pins
+Phase 3.10 Re-assign LUT pins | Checksum: d7e7b2aa
+
+Time (s): cpu = 00:09:41 ; elapsed = 00:05:13 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226023 ; free virtual = 249811
+
+Phase 3.11 Pipeline Register Optimization
+Phase 3.11 Pipeline Register Optimization | Checksum: 149a53487
+
+Time (s): cpu = 00:09:41 ; elapsed = 00:05:13 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226053 ; free virtual = 249841
+
+Phase 3.12 Fast Optimization
+Phase 3.12 Fast Optimization | Checksum: 12fe42118
+
+Time (s): cpu = 00:11:54 ; elapsed = 00:06:57 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225914 ; free virtual = 249703
+Phase 3 Detail Placement | Checksum: 12fe42118
+
+Time (s): cpu = 00:11:54 ; elapsed = 00:06:57 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225915 ; free virtual = 249704
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 200d0e684
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-35] Processed net x_soc/x_c906_wrap/x_cpu_top/x_aq_mp_rst_top/ciu_rst_b, inserted BUFG to drive 13248 loads.
+INFO: [Place 46-45] Replicated bufg driver x_soc/x_c906_wrap/x_cpu_top/x_aq_mp_rst_top/ciu_rst_ff_3rd_reg_bufg_rep
+INFO: [Place 46-35] Processed net x_soc/x_axi2apb_wrap/u_axi2apb/u_bridge/trst_n, inserted BUFG to drive 1424 loads.
+INFO: [Place 46-46] BUFG insertion identified 2 candidate nets, 2 success, 1 bufg driver replicated, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason
+Phase 4.1.1.1 BUFG Insertion | Checksum: 22050005a
+
+Time (s): cpu = 00:12:46 ; elapsed = 00:07:15 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225998 ; free virtual = 249788
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.721. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 242d73c10
+
+Time (s): cpu = 00:14:06 ; elapsed = 00:08:18 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226012 ; free virtual = 249802
+Phase 4.1 Post Commit Optimization | Checksum: 242d73c10
+
+Time (s): cpu = 00:14:07 ; elapsed = 00:08:18 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226013 ; free virtual = 249803
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 242d73c10
+
+Time (s): cpu = 00:14:18 ; elapsed = 00:08:24 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226002 ; free virtual = 249792
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226002 ; free virtual = 249792
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 25c829988
+
+Time (s): cpu = 00:14:24 ; elapsed = 00:08:30 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226004 ; free virtual = 249794
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226004 ; free virtual = 249794
+Phase 4.4 Final Placement Cleanup | Checksum: 1eb6f71ba
+
+Time (s): cpu = 00:14:24 ; elapsed = 00:08:30 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226004 ; free virtual = 249794
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1eb6f71ba
+
+Time (s): cpu = 00:14:25 ; elapsed = 00:08:31 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226004 ; free virtual = 249794
+Ending Placer Task | Checksum: 1a11633bb
+
+Time (s): cpu = 00:14:25 ; elapsed = 00:08:31 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226158 ; free virtual = 249947
+INFO: [Common 17-83] Releasing license: Implementation
+176 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:14:32 ; elapsed = 00:08:39 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226158 ; free virtual = 249948
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226159 ; free virtual = 249949
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226089 ; free virtual = 249917
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225980 ; free virtual = 249903
+INFO: [Common 17-1381] The checkpoint '/home/zfh/Desktop/soc_workspace/soc_c906_v1.1/fpga_xku5p/fpga_xku5p.runs/impl_no_debug/top_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226111 ; free virtual = 249936
+INFO: [runtcl-4] Executing : report_io -file top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.12 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226091 ; free virtual = 249916
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_placed.rpt -pb top_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.18 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 226108 ; free virtual = 249934
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku5p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku5p'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: ff9755a0 ConstDB: 0 ShapeSum: 87d380a3 RouteDB: 19ab5d78
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: f373f329
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:38 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225817 ; free virtual = 249653
+Post Restoration Checksum: NetGraph: 5aff73 NumContArr: fe3a92f4 Constraints: df5666e5 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 1ddebf94c
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:39 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225790 ; free virtual = 249626
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 1ddebf94c
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:40 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225739 ; free virtual = 249575
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 1ddebf94c
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:40 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225739 ; free virtual = 249575
+
+Phase 2.4 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.4 Global Clock Net Routing | Checksum: 1f9981300
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:45 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225717 ; free virtual = 249553
+
+Phase 2.5 Update Timing
+Phase 2.5 Update Timing | Checksum: 27306b5c4
+
+Time (s): cpu = 00:01:54 ; elapsed = 00:01:00 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225668 ; free virtual = 249505
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.497 | TNS=-280.089| WHS=-0.703 | THS=-183.401|
+
+Phase 2 Router Initialization | Checksum: 2621856d0
+
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:16 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225630 ; free virtual = 249466
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1cbb10a78
+
+Time (s): cpu = 00:03:54 ; elapsed = 00:01:42 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225557 ; free virtual = 249395
+
+INFO: [Route 35-449] Initial Estimated Congestion
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+|           |___________________|___________________|___________________|
+| Direction | Size   | % Tiles  | Size   | % Tiles  | Size   | % Tiles  |
+|___________|________|__________|________|__________|________|__________|
+|      NORTH|   16x16|      1.71|   16x16|      2.23|   16x16|      2.80|
+|___________|________|__________|________|__________|________|__________|
+|      SOUTH|     4x4|      0.51|     4x4|      1.24|     8x8|      1.72|
+|___________|________|__________|________|__________|________|__________|
+|       EAST|   16x16|      1.17|     8x8|      0.73|   32x32|      2.92|
+|___________|________|__________|________|__________|________|__________|
+|       WEST|     4x4|      0.79|     4x4|      0.81|     8x8|      2.39|
+|___________|________|__________|________|__________|________|__________|
+Congestion Report
+GLOBAL Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+NORTH
+	INT_X56Y28->INT_X63Y43 (CLEM_X56Y28->CLEL_R_X63Y43)
+	INT_X56Y32->INT_X63Y39 (CLEM_X56Y32->CLEL_R_X63Y39)
+	INT_X56Y31->INT_X63Y38 (CLEM_X56Y31->CLEL_R_X63Y38)
+	INT_X56Y30->INT_X63Y37 (CLEM_X56Y30->CLEL_R_X63Y37)
+	INT_X56Y29->INT_X63Y36 (CLEM_X56Y29->CLEL_R_X63Y36)
+EAST
+	INT_X56Y24->INT_X63Y47 (CLEM_X56Y24->CLEL_R_X63Y47)
+	INT_X56Y32->INT_X63Y39 (CLEM_X56Y32->CLEL_R_X63Y39)
+	INT_X56Y24->INT_X63Y31 (CLEM_X56Y24->CLEL_R_X63Y31)
+	INT_X56Y39->INT_X63Y46 (CLEM_X56Y39->CLEL_R_X63Y46)
+	INT_X56Y31->INT_X63Y38 (CLEM_X56Y31->CLEL_R_X63Y38)
+LONG Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+NORTH
+	INT_X40Y96->INT_X47Y119 (CLEM_X40Y96->CLEL_R_X47Y119)
+	INT_X40Y112->INT_X47Y119 (CLEM_X40Y112->CLEL_R_X47Y119)
+	INT_X40Y104->INT_X47Y111 (CLEM_X40Y104->CLEL_R_X47Y111)
+	INT_X40Y96->INT_X47Y103 (CLEM_X40Y96->CLEL_R_X47Y103)
+	INT_X40Y111->INT_X47Y118 (CLEM_X40Y111->CLEL_R_X47Y118)
+SHORT Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+NORTH
+	INT_X49Y22->INT_X64Y45 (CLEM_X49Y22->CLEL_R_X64Y45)
+	INT_X48Y26->INT_X63Y41 (CLEM_X48Y26->CLEL_R_X63Y41)
+	INT_X48Y25->INT_X63Y40 (CLEM_X48Y25->CLEL_R_X63Y40)
+	INT_X48Y24->INT_X63Y39 (CLEM_X48Y24->CLEL_R_X63Y39)
+	INT_X48Y23->INT_X63Y38 (CLEM_X48Y23->CLEL_R_X63Y38)
+EAST
+	INT_X50Y19->INT_X65Y50 (CLEL_L_X50Y19->CLEL_R_X65Y50)
+	INT_X48Y32->INT_X63Y47 (CLEM_X48Y32->CLEL_R_X63Y47)
+	INT_X48Y31->INT_X63Y46 (CLEM_X48Y31->CLEL_R_X63Y46)
+	INT_X48Y30->INT_X63Y45 (CLEM_X48Y30->CLEL_R_X63Y45)
+	INT_X48Y29->INT_X63Y44 (CLEM_X48Y29->CLEL_R_X63Y44)
+
+INFO: [Route 35-448] Estimated routing congestion is level 5 (32x32). Congestion levels of 5 and greater can reduce routability and impact timing closure.
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 45274
+ Number of Nodes with overlaps = 8887
+ Number of Nodes with overlaps = 3466
+ Number of Nodes with overlaps = 1969
+ Number of Nodes with overlaps = 1184
+ Number of Nodes with overlaps = 823
+ Number of Nodes with overlaps = 573
+ Number of Nodes with overlaps = 398
+ Number of Nodes with overlaps = 290
+ Number of Nodes with overlaps = 236
+ Number of Nodes with overlaps = 185
+ Number of Nodes with overlaps = 141
+ Number of Nodes with overlaps = 91
+ Number of Nodes with overlaps = 68
+ Number of Nodes with overlaps = 50
+ Number of Nodes with overlaps = 28
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 8
+INFO: [Route 35-443] CLB routing congestion detected. Several CLBs have high routing utilization, which can impact timing closure. Top ten most congested CLBs are: CLEL_R_X65Y40 CLEM_X64Y43 CLEL_R_X64Y43 CLEM_X64Y41 CLEL_R_X64Y41 CLEL_L_X55Y95 CLEL_R_X55Y95 CLEM_X37Y222 CLEL_R_X37Y222 
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.813 | TNS=-8341.779| WHS=-0.058 | THS=-0.311 |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1ca0aa19d
+
+Time (s): cpu = 00:23:06 ; elapsed = 00:11:53 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225511 ; free virtual = 249362
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 284
+ Number of Nodes with overlaps = 94
+ Number of Nodes with overlaps = 36
+ Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.376 | TNS=-7037.434| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1658ad843
+
+Time (s): cpu = 00:25:22 ; elapsed = 00:13:54 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225562 ; free virtual = 249419
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 311
+ Number of Nodes with overlaps = 101
+ Number of Nodes with overlaps = 51
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.292 | TNS=-5801.968| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 150bcaf54
+
+Time (s): cpu = 00:27:23 ; elapsed = 00:15:43 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225549 ; free virtual = 249413
+
+Phase 4.4 Global Iteration 3
+ Number of Nodes with overlaps = 2483
+ Number of Nodes with overlaps = 496
+ Number of Nodes with overlaps = 265
+ Number of Nodes with overlaps = 178
+ Number of Nodes with overlaps = 113
+ Number of Nodes with overlaps = 84
+ Number of Nodes with overlaps = 56
+ Number of Nodes with overlaps = 53
+ Number of Nodes with overlaps = 32
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.235 | TNS=-5061.354| WHS=N/A    | THS=N/A    |
+
+Phase 4.4 Global Iteration 3 | Checksum: 1e495507e
+
+Time (s): cpu = 00:31:04 ; elapsed = 00:18:22 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225510 ; free virtual = 249381
+
+Phase 4.5 Global Iteration 4
+ Number of Nodes with overlaps = 1382
+ Number of Nodes with overlaps = 351
+ Number of Nodes with overlaps = 178
+ Number of Nodes with overlaps = 110
+ Number of Nodes with overlaps = 68
+ Number of Nodes with overlaps = 52
+ Number of Nodes with overlaps = 37
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.152 | TNS=-4726.596| WHS=N/A    | THS=N/A    |
+
+Phase 4.5 Global Iteration 4 | Checksum: 167e5c44d
+
+Time (s): cpu = 00:33:10 ; elapsed = 00:19:47 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225506 ; free virtual = 249381
+
+Phase 4.6 Global Iteration 5
+ Number of Nodes with overlaps = 376
+ Number of Nodes with overlaps = 104
+ Number of Nodes with overlaps = 44
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.143 | TNS=-4423.995| WHS=N/A    | THS=N/A    |
+
+Phase 4.6 Global Iteration 5 | Checksum: 2e01e8eff
+
+Time (s): cpu = 00:33:59 ; elapsed = 00:20:24 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225517 ; free virtual = 249394
+Phase 4 Rip-up And Reroute | Checksum: 2e01e8eff
+
+Time (s): cpu = 00:33:59 ; elapsed = 00:20:25 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225517 ; free virtual = 249394
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 392349c59
+
+Time (s): cpu = 00:34:23 ; elapsed = 00:20:32 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225526 ; free virtual = 249403
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.143 | TNS=-4423.994| WHS=0.013  | THS=0.000  |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 2597ee33f
+
+Time (s): cpu = 00:34:26 ; elapsed = 00:20:34 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225487 ; free virtual = 249364
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 2597ee33f
+
+Time (s): cpu = 00:34:26 ; elapsed = 00:20:34 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225487 ; free virtual = 249364
+Phase 5 Delay and Skew Optimization | Checksum: 2597ee33f
+
+Time (s): cpu = 00:34:27 ; elapsed = 00:20:34 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225487 ; free virtual = 249364
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 26c12e866
+
+Time (s): cpu = 00:34:46 ; elapsed = 00:20:41 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225503 ; free virtual = 249380
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.133 | TNS=-4423.556| WHS=0.013  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 277509381
+
+Time (s): cpu = 00:34:46 ; elapsed = 00:20:41 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225503 ; free virtual = 249380
+Phase 6 Post Hold Fix | Checksum: 277509381
+
+Time (s): cpu = 00:34:46 ; elapsed = 00:20:41 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225504 ; free virtual = 249381
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 13.5632 %
+  Global Horizontal Routing Utilization  = 13.5378 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 92.4883%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_X46Y95 -> INT_X46Y95
+   INT_X49Y91 -> INT_X49Y91
+   INT_X60Y39 -> INT_X60Y39
+   INT_X59Y38 -> INT_X59Y38
+   INT_X59Y37 -> INT_X59Y37
+South Dir 1x1 Area, Max Cong = 79.1469%, No Congested Regions.
+East Dir 4x4 Area, Max Cong = 85.1562%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_X56Y32 -> INT_X59Y35
+West Dir 1x1 Area, Max Cong = 91.3462%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_X55Y94 -> INT_X55Y94
+   INT_X60Y19 -> INT_X60Y19
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 2 Aspect Ratio: 0.8 Sparse Ratio: 0.5625
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 2
+Effective congestion level: 2 Aspect Ratio: 1 Sparse Ratio: 1
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.5 Sparse Ratio: 0.5
+
+Phase 7 Route finalize | Checksum: 24e82be88
+
+Time (s): cpu = 00:34:49 ; elapsed = 00:20:43 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225499 ; free virtual = 249376
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 24e82be88
+
+Time (s): cpu = 00:34:49 ; elapsed = 00:20:43 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225497 ; free virtual = 249374
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 24e82be88
+
+Time (s): cpu = 00:34:56 ; elapsed = 00:20:51 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225498 ; free virtual = 249376
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.133 | TNS=-4423.556| WHS=0.013  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 24e82be88
+
+Time (s): cpu = 00:34:57 ; elapsed = 00:20:51 . Memory (MB): peak = 5116.484 ; gain = 0.000 ; free physical = 225511 ; free virtual = 249389
+Time taken to check if laguna hold fix is required (in secs): 0
+
+Phase 11 Physical Synthesis in Router
+
+Phase 11.1 Physical Synthesis Initialization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-1.122 | TNS=-4127.395 | WHS=0.014 | THS=0.000 |
+Phase 11.1 Physical Synthesis Initialization | Checksum: 24e82be88
+
+Time (s): cpu = 00:35:48 ; elapsed = 00:21:04 . Memory (MB): peak = 5235.445 ; gain = 118.961 ; free physical = 225382 ; free virtual = 249261
+WARNING: [Physopt 32-745] Physical Optimization has determined that the magnitude of the negative slack is too large and it is highly unlikely that slack will be improved. Post-Route Physical Optimization is most effective when WNS is above -0.5ns
+
+Phase 11.2 Critical Path Optimization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-1.122 | TNS=-4127.395 | WHS=0.014 | THS=0.000 |
+INFO: [Physopt 32-952] Improved path group WNS = -1.118. Path group: sys_clk_pin. Processed net: x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_ibuf/Q[2].
+INFO: [Physopt 32-952] Improved path group WNS = -1.117. Path group: sys_clk_pin. Processed net: x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_ibuf/x_aq_ifu_ibuf_entry2/entry_inst_reg[15]_0[9].
+INFO: [Physopt 32-952] Improved path group WNS = -1.115. Path group: sys_clk_pin. Processed net: x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_ibuf/x_aq_ifu_ibuf_entry3/entry_inst_reg[15]_4[6].
+INFO: [Physopt 32-952] Improved path group WNS = -1.103. Path group: sys_clk_pin. Processed net: x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_ibuf/x_aq_ifu_ibuf_entry3/entry_inst_reg[15]_4[14].
+INFO: [Physopt 32-952] Improved path group WNS = -1.089. Path group: sys_clk_pin. Processed net: x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_ibuf/x_aq_ifu_ibuf_entry2/entry_inst_reg[15]_0[10].
+INFO: [Physopt 32-952] Improved path group WNS = -1.089. Path group: sys_clk_pin. Processed net: x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_ibuf/x_aq_ifu_ibuf_entry2/entry_inst_reg[15]_0[14].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: sys_clk_pin. Processed net: x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_ifu_top/x_aq_ifu_ibuf/x_aq_ifu_ibuf_entry2/entry_inst_reg[15]_0[3].
+INFO: [Physopt 32-953] Path group WNS did not improve. Path group: sys_clk_pin. Processed net: x_soc/x_c906_wrap/x_cpu_top/x_aq_top_0/x_aq_core/x_aq_lsu_top/x_aq_lsu_dc/dc_pfb_ld_init_pa[27].
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-1.089 | TNS=-4126.723 | WHS=0.014 | THS=0.000 |
+Phase 11.2 Critical Path Optimization | Checksum: 2ed7b9661
+
+Time (s): cpu = 00:36:11 ; elapsed = 00:21:14 . Memory (MB): peak = 5287.375 ; gain = 170.891 ; free physical = 225342 ; free virtual = 249221
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5287.375 ; gain = 0.000 ; free physical = 225342 ; free virtual = 249222
+INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=-1.089 | TNS=-4126.723 | WHS=0.014 | THS=0.000 |
+Phase 11 Physical Synthesis in Router | Checksum: 2ed7b9661
+
+Time (s): cpu = 00:36:13 ; elapsed = 00:21:15 . Memory (MB): peak = 5287.375 ; gain = 170.891 ; free physical = 225349 ; free virtual = 249229
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:36:13 ; elapsed = 00:21:16 . Memory (MB): peak = 5287.375 ; gain = 170.891 ; free physical = 225487 ; free virtual = 249367
+INFO: [Common 17-83] Releasing license: Implementation
+213 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:36:23 ; elapsed = 00:21:24 . Memory (MB): peak = 5287.375 ; gain = 170.891 ; free physical = 225487 ; free virtual = 249367
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5287.375 ; gain = 0.000 ; free physical = 225487 ; free virtual = 249367
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5287.375 ; gain = 0.000 ; free physical = 225428 ; free virtual = 249343
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 5287.375 ; gain = 0.000 ; free physical = 225260 ; free virtual = 249325
+INFO: [Common 17-1381] The checkpoint '/home/zfh/Desktop/soc_workspace/soc_c906_v1.1/fpga_xku5p/fpga_xku5p.runs/impl_no_debug/top_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 5287.375 ; gain = 0.000 ; free physical = 225429 ; free virtual = 249359
+INFO: [runtcl-4] Executing : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+Command: report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/zfh/Desktop/soc_workspace/soc_c906_v1.1/fpga_xku5p/fpga_xku5p.runs/impl_no_debug/top_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 5375.414 ; gain = 88.039 ; free physical = 225384 ; free virtual = 249314
+INFO: [runtcl-4] Executing : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+Command: report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/zfh/Desktop/soc_workspace/soc_c906_v1.1/fpga_xku5p/fpga_xku5p.runs/impl_no_debug/top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:39 ; elapsed = 00:00:14 . Memory (MB): peak = 5375.414 ; gain = 0.000 ; free physical = 225068 ; free virtual = 248999
+INFO: [runtcl-4] Executing : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+Command: report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+225 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:01:09 ; elapsed = 00:00:29 . Memory (MB): peak = 5444.988 ; gain = 69.574 ; free physical = 225001 ; free virtual = 248945
+INFO: [runtcl-4] Executing : report_route_status -file top_route_status.rpt -pb top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+Command: write_bitstream -force top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xcku5p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku5p'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+244 Infos, 3 Warnings, 1 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:57 ; elapsed = 00:00:37 . Memory (MB): peak = 5508.875 ; gain = 63.887 ; free physical = 225270 ; free virtual = 249233
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  7 18:25:34 2025...
